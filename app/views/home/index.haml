@@ -1,13 +1,12 @@
-%body
-  %section.section
-    .container
-      %h1.title Ruby on Rails + Arduino
-      %h2.subtitle
-        - if @arduino_version.nil?
-          %h1= @error
-        - else
-          %h1 Arduino version: #{@arduino_version}
-      %br
-      .buttons
-        =button_to "Turn On", {action: "turn_on", remote: true}, {class: 'button button is-info'}
-        =button_to "Turn Off", {action: "turn_off", remote: true}, {class: 'button button is-danger'}
+%section.section
+  .container
+    %h1.title Ruby on Rails + Arduino
+    %h2.subtitle
+      - if @arduino_version.nil?
+        %h1= @error
+      - else
+        %h1 Arduino version: #{@arduino_version}
+    %br
+    .buttons
+      =button_to "Turn On", {action: "turn_on", remote: true}, {class: 'button button is-info'}
+      =button_to "Turn Off", {action: "turn_off", remote: true}, {class: 'button button is-danger'}
